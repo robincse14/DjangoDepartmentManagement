@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Robin.css' %}">
+	<title>Sign Up</title>
+</head>
+<body>
+<center><h1>Sign Up</h1></center>
+
+<a href="../../student/login/" align="right"> LOGIN </a>
+
+<form action="auth/" method="POST">
+    {% csrf_token %}
+    {{ error }}
+	Username:<br>
+	<input type="text" name="Username" placeholder="Username" class="sform"><br>
+	<br>
+    HostelId:<br>
+	<input type="text" name="HostelId" placeholder="HostelId" class="sform"><br>
+	<br>
+    Mobile No:<br>
+	<input type="text" name="mno" placeholder="Mobile No" class="sform"><br>
+	<br>
+    RoomNo:<br>
+	<input type="text" name="roomno" placeholder="RoomNo" class="sform"><br>
+	<br>
+	First Name:<br>
+	<input type="text" name="firstname" placeholder="First Name" class="sform"><br>
+	<br>
+	Last Name:<br>
+	<input type="text" name="lastname" placeholder="Last Name" class="sform"><br>
+	<br>
+	Dept name:<br>
+	<input type="text" name="deptname" placeholder="Department Name" class="sform"><br>
+	<br>
+	Date of Birth:<br>
+	<input type="text" name="dob" placeholder="YYYY-MM-DD" class="sform"><br>
+	<br>
+	Gender:
+	<input type="radio" name="gender" value="M" class="sbutton"> Male <input type="radio" name="gender" value="F" class="sbutton"> Female<br>
+	<br>
+	Email ID:<br>
+	<input type="email" name="eml" placeholder="Email ID" class="sform"><br>
+	<br>
+	Password:<br>
+	<input type="password" name="pwd" placeholder="Password" class="sform"><br>
+	<br>
+	Confirm Password:<br>
+	<input type="password" name="cpwd" placeholder="Confirm Password" class="sform"><br>
+	<br>
+	<input type="submit" name="Submit" value="Submit" >
+</form>
+
+</body>
+</html>

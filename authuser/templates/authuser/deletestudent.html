@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Robin.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<h3> {{ message }}</h3>
+<br> <br> <br>
+<form action="vali/" method="POST">
+    {% csrf_token %}
+    Id<input type="text" name ="id" /><br> <br>
+    <input type="submit" value="submit" />
+
+</form>
+<body>
+
+<center>
+    <br>
+<a href="/DBMSP1/home/"><button>Home</button> </a>
+<br> <br> <br>
+    <a href="signout/"> SignOut </a>
+    </center>
+</body>
+</html>

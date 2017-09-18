@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Robin.css' %}">
+<title>Profile</title>
+
+</head>
+
+<body>
+<center>
+<h2>Info </h2>
+
+</center>
+
+<br> <br>
+<form action='vali/' method='POST' style='width:100%'>
+{% csrf_token %}
+    <h4>  {{ Error }}</h4>
+    <br> <br>
+<table style='text-align:center ; margin-left:5% ; color:black ; width:100%'>
+
+<tr>
+<td>StudentId</td>
+<td><input type='text' name='sid'  /></td>
+</tr> <br>
+
+<tr>
+<td>CourseId</td>
+<td><input type='text' name='cid'  /></td>
+</tr> <br>
+
+
+<tr>
+<td>Semester</td>
+<td><input type='text' name='sem'  /></td>
+</tr> <br>
+
+
+<tr>
+<td>Year</td>
+<td><input type='text' name='year'  /></td>
+</tr> <br>
+
+
+</table>
+<br> <br>
+<input type='submit' style='width:30% ; margin-left:35%' value='Submit'/>
+
+</form> <br> <br>
+<center>
+    <br>
+<a href="/DBMSP1/home/"><button>Home</button> </a>
+<br> <br> <br>
+    <a href="signout/"> SignOut </a>
+    </center>
+
+</body>
+</html>

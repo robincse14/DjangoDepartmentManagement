@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Robin.css' %}">
+    <meta charset="UTF-8">
+    <title>Marks</title>
+
+</head>
+<h3> {{ message }}</h3>
+<body>
+
+<form action="change/" method="POST">
+    {% csrf_token %}
+    <input type='text' name="grd" value="{{ grade }}" />
+    <input type="hidden" value="{{ sem }}" name="sem"/>
+    <input type="hidden" value="{{ year }}" name="year"/>
+    <input type="hidden" value="{{ cid }}" name="cid"/>
+    <input type="hidden" value="{{ sid }}" name="sid"/>
+    <input type="submit" name="'submit" value="change" />
+
+</form>
+
+<center>
+    <br>
+<a href="/DBMSP1/home/"><button>Home</button> </a>
+<br> <br> <br>
+    <a href="signout/"> SignOut </a>
+    </center>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Robin.css' %}">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Faculty Information</h1>
+<br><br>
+<h3> {{ message }}</h3>
+<table border="1">
+<tr style="color:black">
+        <th> ID</th>
+        <th> name</th>
+        <th> deptname</th>
+    </tr>
+
+{% for i in L %}
+    <tr style="color:black ; height:40px">
+    <td> {{ i.0 }} </td>
+    <td> {{ i.1 }} </td>
+    <td> {{ i.3 }} </td>
+
+    </tr>
+
+    {% endfor %}
+</table>
+<center>
+    <br>
+<a href="/DBMSP1/home/"><button>Home</button> </a>
+<br> <br> <br>
+    <a href="signout/"> SignOut </a>
+    </center>
+</body>
+</html>

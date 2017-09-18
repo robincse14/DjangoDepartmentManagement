@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Robin.css' %}">
+<title>Profile</title>
+
+</head>
+
+<body>
+<center>
+<h2>Student Info </h2>
+
+</center>
+
+<br> <br>
+<form action='../update/' method='POST' style='width:100%'>
+{% csrf_token %}
+    <h4>  {{ message }}</h4>
+    <br> <br>
+<table style='text-align:center ; margin-left:5% ; color:black ; width:100%'>
+
+<tr>
+<td>Username</td>
+<td><input type='text' name='username' style='width:60%' value={{username}} readonly='readonly' /></td>
+</tr> <br>
+
+<tr>
+<td>Name</td>
+<td><input type='text' name='name' style='width:60%' value="{{name}}" /></td>
+</tr> <br>
+
+<tr>
+<td> Email ID </td>
+<td> <input type='text' name='email' value={{email}} style='width:60%' /> </td>
+</tr> <br>
+
+
+<tr>
+<td> Mobile Number </td>
+<td> <input type='text' name='mno' value="{{mno}}" style='width:60%'/> </td>
+</tr> <br>
+
+<tr>
+<td> dob </td>
+<td> <input type='text' name='dob' value="{{dob}}" style='width:60%' /> </td>
+</tr> <br>
+
+<tr>
+<td> Department </td>
+<td> <input type='text' name='deptname' value="{{deptname}}" style='width:60%'/> </td>
+</tr> <br>
+
+
+<tr>
+<td> gender </td>
+<td> <input type='text' name='gender' value={{gender}} style='width:60%' /> </td>
+</tr> <br>
+
+<tr>
+<td> Room No </td>
+<td> <input type='text' name='roomno' value={{roomno}} style='width:60%'/> </td>
+</tr> <br>
+
+
+<tr>
+<td> HostelId </td>
+<td> <input type='text' name='hostelid' value={{hostelid}} style='width:60%'/> </td>
+</tr> <br>
+
+</table>
+<br> <br>
+<input type='submit' style='width:30% ; margin-left:35%' value='Update'/>
+
+</form> <br> <br>
+
+    <center>
+    <br>
+<a href="/DBMSP1/home/"><button>Home</button> </a>
+<br> <br> <br>
+    <a href="signout/"> SignOut </a>
+    </center>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'Robin.css' %}">
+</head>
+
+
+
+<body>
+<center><h1>LOGIN</h1></center>
+
+
+
+<form action="auth/" method="POST">
+    {% csrf_token %}
+    {{ error }}
+	UserName:
+	<input type="text" name="Username" placeholder="Username"><br>
+	Password:
+	<input type="password" name="pwd" placeholder="password"><br>
+	<br> <br>
+	<input type="radio" name="person" value="faculty"> Faculty<br>
+	<br> <br>
+
+  	<input type="radio" name="person" value="student"> Student<br>
+	<br> <br>
+  	<input type="radio" name="person" value="admin"> Admin<br>
+  	<input type="submit" value="Submit">
+
+
+</form>
+<center>
+    <br>
+<a href="/DBMSP1/home/"><button>Home</button> </a>
+<br> <br> <br>
+    <a href="signout/"> SignOut </a>
+    </center>
+
+</body>
+</html>
